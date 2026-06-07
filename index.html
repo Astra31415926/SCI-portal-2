@@ -5,92 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Model SCI | Mykhailo Kashkarov</title>
   <style>
-    :root {
-      --accent: #0f766e;
-    }
+    :root { --accent: #0f766e; }
     body {
       font-family: 'Segoe UI', system-ui, sans-serif;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       background: #f8fafc;
       color: #1e2937;
-      line-height: 1.65;
+      line-height: 1.7;
     }
     .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
     header {
       background: white;
-      border-bottom: 3px solid var(--accent);
-      padding: 2rem 0;
+      border-bottom: 4px solid var(--accent);
+      padding: 3rem 0;
       text-align: center;
     }
-    h1 { font-size: 2.4rem; margin: 0; color: #0f172a; }
-    .subtitle { font-size: 1.1rem; color: #475569; margin: 8px 0 0; }
+    h1 { font-size: 2.6rem; margin: 0; color: #0f172a; }
+    .subtitle { font-size: 1.25rem; color: #475569; margin-top: 10px; }
 
-    nav {
-      background: white;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid #e2e8f0;
-      padding: 12px 0;
-    }
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .nav-links a {
-      color: #334155;
-      text-decoration: none;
-      font-weight: 500;
-    }
+    nav { background: white; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #e2e8f0; padding: 15px 0; }
+    .nav-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+    .nav-links a { color: #334155; text-decoration: none; font-weight: 500; }
     .nav-links a:hover { color: var(--accent); }
 
     .section {
       background: white;
-      padding: 40px;
-      margin: 30px 0;
+      padding: 45px;
+      margin: 35px 0;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
     .accent-box {
-      border-left: 5px solid var(--accent);
-      padding-left: 20px;
+      border-left: 6px solid var(--accent);
+      padding: 25px;
       background: #f1f5f9;
-      padding: 20px;
       border-radius: 8px;
+      margin: 20px 0;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
     }
     .gallery-item {
       background: white;
-      border-radius: 10px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      transition: all 0.3s;
     }
-    .gallery-item:hover { transform: translateY(-8px); }
+    .gallery-item:hover { transform: translateY(-10px); box-shadow: 0 12px 25px rgba(0,0,0,0.15); }
     .gallery-item img {
       width: 100%;
-      height: 220px;
+      height: 240px;
       object-fit: cover;
     }
     .gallery-info {
-      padding: 14px;
-      font-size: 0.95rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 0;
-      color: #64748b;
-      font-size: 0.95rem;
+      padding: 16px;
+      font-size: 1rem;
     }
   </style>
 </head>
@@ -100,16 +74,16 @@
     <div class="container">
       <h1>Model SCI</h1>
       <p class="subtitle">Замкнута система спектральних констант</p>
-      <p><strong>Mykhailo Kashkarov</strong> • bakminsterfuler@gmail.com • +380 63 505 8292</p>
+      <p><strong>Mykhailo Kashkarov</strong></p>
     </div>
   </header>
 
   <nav>
     <div class="container nav-links">
       <a href="#nature">Природа Crosstalk</a>
-      <a href="#model">Суть моделі SCI</a>
+      <a href="#model">Суть моделі</a>
       <a href="#applications">Прикладне значення</a>
-      <a href="#projects">Проєкти</a>
+      <a href="#projects">Інструменти</a>
       <a href="#gallery">Галерея</a>
       <a href="#contact">Контакти</a>
     </div>
@@ -117,70 +91,66 @@
 
   <div class="container">
 
-    <!-- Природа дефекту -->
     <section id="nature" class="section">
       <h2>Фізична природа Crosstalk</h2>
       <div class="accent-box">
-        <p><strong>Субстрактивна модель (CMYK)</strong> фізично не є точним відображенням адитивної моделі (RGB). Пігменти мають обмежену селективність: вони не здатні повністю поглинати цільовий спектр і повністю відображати нецільовий.</p>
-        <p>Найсуттєвіша проблема — <strong>спектральна інтерференція (crosstalk)</strong> між каналами, особливо виражена у пурпурному та блакитному пігментах.</p>
+        <p>Субстрактивна модель (CMYK) фізично відрізняється від адитивної (RGB). Пігменти мають обмежену селективність і викликають спектральну інтерференцію (crosstalk) між каналами.</p>
+        <p>Особливо виражений цей ефект у пурпурному та блакитному пігментах, що призводить до неконтрольованого спотворення відносних пропорцій при переході з екрана на друк.</p>
       </div>
     </section>
 
-    <!-- Суть моделі -->
     <section id="model" class="section">
       <h2>Суть моделі SCI</h2>
-      <p>Модель SCI створює <strong>замкнуту систему спектральних констант</strong>, в якій усі кольорові зони приводяться до однакового інтегрального відгуку в заданому вузькому спектральному каналі:</p>
-      <p class="accent-box"><strong>∫ Rᵢ(λ) · S(λ) dλ = const</strong></p>
-      <p>Це досягається шляхом штучного обмеження спектральних характеристик сильних пігментів до рівня слабших. Результат — зниження контрастності, але збереження математичної точності відносних пропорцій між каналами.</p>
+      <p>Модель SCI створює замкнуту систему спектральних констант, в якій усі кольорові зони мають однаковий інтегральний відгук у заданому спектральному каналі:</p>
+      <div class="accent-box">
+        <strong>∫ Rᵢ(λ) · S(λ) dλ = const</strong>
+      </div>
+      <p>Це досягається шляхом математичного обмеження спектральних характеристик сильних пігментів. Результат — зниження візуальної контрастності, але висока математична точність відносин між каналами.</p>
     </section>
 
-    <!-- Прикладне значення -->
     <section id="applications" class="section">
       <h2>Прикладне значення</h2>
-      <p>Model SCI — це спеціалізований інструмент для задач, де пріоритетом є стабільність спектральних співвідношень, а не візуальна насиченість.</p>
+      <p>Model SCI є спеціалізованим інструментом для задач, де потрібна стабільність спектральних співвідношень:</p>
       <ul>
         <li>Багатошарове оптичне кодування даних</li>
-        <li>Стійкі до перекручень матриці для комп’ютерного зору</li>
-        <li>Інструментальний контроль якості друку в вузьких спектральних діапазонах</li>
+        <li>Стійкі кольорові матриці для комп’ютерного зору</li>
+        <li>Об’єктивний контроль якості друку в вузьких спектральних діапазонах</li>
       </ul>
     </section>
 
-    <!-- Проєкти -->
     <section id="projects" class="section">
-      <h2>Пов’язані проєкти</h2>
-      <p>Інструменти, розроблені автором для роботи з кольором і кодуванням:</p>
+      <h2>Інструменти автора</h2>
       <ul>
         <li><a href="https://astra31415926.github.io/QRnament2/" target="_blank"><strong>QRnament2</strong></a> — генератор орнаментальних QR-кодів</li>
         <li><a href="https://astra31415926.github.io/QR.G.B.-ART/" target="_blank"><strong>QR.G.B.-ART</strong></a> — генератор художніх RGB QR-кодів</li>
       </ul>
     </section>
 
-    <!-- Галерея -->
     <section id="gallery" class="section">
       <h2>RGB Art Gallery</h2>
-      <p>Приклади робіт, створених з використанням розроблених підходів:</p>
+      <p>Приклади робіт з використанням розроблених методів роботи з кольором:</p>
+      
       <div class="gallery">
-        <!-- Додай сюди свої картинки -->
+        <!-- Додай сюди реальні посилання на картинки з твого репозиторію spectral-color-model -->
         <div class="gallery-item">
-          <img src="https://astra31415926.github.io/images/приклад1.jpg" alt="Приклад 1">
+          <img src="https://raw.githubusercontent.com/Astra31415926/spectral-color-model/main/images/example1.jpg" alt="Приклад 1">
           <div class="gallery-info">Орнаментальний QR-код</div>
         </div>
         <div class="gallery-item">
-          <img src="https://astra31415926.github.io/images/приклад2.jpg" alt="Приклад 2">
+          <img src="https://raw.githubusercontent.com/Astra31415926/spectral-color-model/main/images/example2.jpg" alt="Приклад 2">
           <div class="gallery-info">RGB Art композиція</div>
         </div>
-        <!-- Додай ще стільки, скільки потрібно -->
+        <!-- Додай ще картинки за аналогією -->
       </div>
     </section>
 
-    <!-- Контакти -->
     <section id="contact" class="section">
       <h2>Контакти</h2>
       <p><strong>Mykhailo Kashkarov</strong></p>
       <p>Email: <a href="mailto:bakminsterfuler@gmail.com">bakminsterfuler@gmail.com</a></p>
       <p>Телефон: +380 63 505 8292</p>
-      <p>Zenodo: <a href="https://zenodo.org/records/19633526" target="_blank">Запис 19633526</a></p>
-      <p>GitHub: <a href="https://github.com/Astra31415926" target="_blank">@Astra31415926</a></p>
+      <p>Zenodo: <a href="https://zenodo.org/records/19633526" target="_blank">19633526</a></p>
+      <p>GitHub: <a href="https://github.com/Astra31415926/spectral-color-model" target="_blank">spectral-color-model</a></p>
     </section>
 
   </div>
@@ -188,6 +158,5 @@
   <footer>
     © 2026 Mykhailo Kashkarov • Model SCI
   </footer>
-
 </body>
 </html>

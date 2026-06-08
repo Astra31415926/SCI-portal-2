@@ -32,12 +32,12 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Build project
-        run: CI=false npm run build
+        run: CI=false npm run build -- --base=/SCI-portal-2/ --outDir=.
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
